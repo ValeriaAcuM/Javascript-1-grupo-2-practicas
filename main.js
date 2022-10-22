@@ -39,3 +39,27 @@ for (let i = 0; i < miArray.length; i++) {
   }
 };
 console.log(contador);
+
+
+/* 4. Cree un programa que reciba un array de números, verifique cuáles números
+están repetidos y retorne un array con dichos números (los que estan
+duplicados), si no hay números repetidos en el array debe retornar el
+siguiente mensaje: “No se encontraron números repetidos en la lista de
+números recibida”. Debe usar un ciclo for */
+
+numbers = [1, 2, 3, 3, 7];
+  function findDuplicatedNumber(arr){
+    let duplicated = [];
+    for(let i = 0; i < arr.length; i++){
+        for(let j = i + 1; j < arr.length; j++){
+            if(arr[i] === arr[j]){
+                duplicated.push(arr[i]);
+            }
+            else ("No hay duplicados");
+        }
+    }
+    return duplicated;
+}
+
+let result = findDuplicatedNumber(numbers);
+console.log(result);
